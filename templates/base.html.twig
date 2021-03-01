@@ -1,12 +1,66 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        {% block stylesheets %}
+        {% endblock %}
+        <link rel="stylesheet" href={{ asset('/css/header.css') }}>
+        <link rel="stylesheet" href={{ asset('/css/footer.css') }}>
+
+        <title>{% block title %}{% endblock %}</title>
     </head>
     <body>
+        <header>
+            <ul class="header_ul">
+                <li>
+                    Paris : 09 70 91 24 50
+                </li>
+                <li>
+                    Saint-Céré :  05 65 11 67 49
+                </li>
+            </ul>
+            <img src={{ asset('/asset/logo.svg') }}>
+            <p class="header_p">Nous contacter</p>
+        </header>
+        <nav>
+            <ul class="nav_container">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        Cours Complets
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        Cours Complets
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        Cours Complets
+                        <ul class="dropdown">
+                            <li>Cours Complets</li>
+                        </ul>
+                    </a>
+                </li>
+            </ul>
+        </nav>
         {% block body %}{% endblock %}
+        <footer>
+            <img src="{{ asset('/asset/footersvg.svg') }}">
+            <div class="middle_footer">
+                <p class="copywrite">© 2020 Sarracuisine</p>
+            </div>
+            <p class="reseau">Retrouvez nous sur</p>
+        </footer>
         {% block javascripts %}{% endblock %}
     </body>
 </html>
+
+
+
+{#<ul class="dropdown">#}
+{#    <a href="#"><li>Cours Complets</li></a>#}
+{#    <a href="#"><li>Cours Complets</li></a>#}
+{#</ul>#}

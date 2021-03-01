@@ -1,0 +1,36 @@
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7vh;
+    width: 100%;
+    margin-top: 5rem;
+    border-top: 2px solid #9B2423;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    padding-top: 1.5rem;
+}
+.middle_footer{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+}
+
+.copywrite{
+    font-family: Arima Madurai;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    color: #9B2423;
+}
+
+.reseau{
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    color: #000000;
+}

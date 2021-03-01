@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+    {% block title %}Sarracuisine - Le comptoir gourmand{% endblock %}
+    {% block stylesheets %}
+        <link rel="stylesheet" href={{ asset('/css/index.css') }}>
+
+    {% endblock %}
+    {% block body %}
+        <section class="section_image_container">
+            <img src="{{ asset('/asset/sarracuisine-devant.png') }}" class="section_image">
+        </section>
+        <section class="section_livraison">
+            <div class="livraison_container">
+                <img src="{{ asset('/asset/camion.svg') }}" class="img_camion">
+                <p class="txt_livraison">
+                    Retrait des commandes dans nos comptoirs, ou livraison possible sur demande ! Commande au 09 70 91 24 50 (Paris) ou nous envoyer un mail à sarracuisine@gmail.com
+                </p>
+            </div>
+        </section>
+        <section class="section_product">
+            <div class="title">
+                <h2 class="txt_product">Produits populaires</h2>
+            </div>
+            <div class="product_container">
+                {% for product in products %}
+                    <img src="{{ asset(product.imageArray[0]) }} " class="img_product">
+                {% endfor %}
+            </div>
+        </section>
+        <section class="section_comptoirs">
+            <div class="comptoirs_container">
+                <img src="{{"/asset/photo-adresse.png"}}" class="img_comptoirs">
+               <div class="info_container">
+                   <h3 class="title_comptoirs">Nos comptoirs</h3>
+                   <h4 class="subtitle_comptoirs">Sarracuisine Paris</h4>
+                   <p class="txt_comptoirs">Marché des Batignolles (Métro Brochant)
+                       96, bis rue Lemercier
+                       75017 Paris</p>
+                   <p class="tel_comptoirs">09 70 91 24 50</p>
+                   <small>Ouvert de 8h30 à 20h30, du mardi au samedi et jusqu’à 14h le dimanche</small>
+                   <h4 class="subtitle_comptoirs">Sarracuisine Paris</h4>
+                   <p class="txt_comptoirs">Marché des Batignolles (Métro Brochant)
+                       96, bis rue Lemercier
+                       75017 Paris</p>
+                   <p class="tel_comptoirs">09 70 91 24 50</p>
+                   <small>Ouvert de 8h30 à 20h30, du mardi au samedi et jusqu’à 14h le dimanche</small>
+               </div>
+            </div>
+        </section>
+        <section class="section_button">
+            <button class="btn_contact">Nous contacter</button>
+        </section>
+    {% endblock %}

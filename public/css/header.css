@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 15vh;
+    align-items: center;
+}
+
+.header_ul{
+    list-style-type: none;
+    color: #9B2423;
+    font-family: 'Arima Madurai', cursive;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 29px;
+}
+.header_p{
+    font-family: 'Arima Madurai', cursive;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 33px;
+    color: #9B2423;
+}
+
+.nav_container{
+    display: flex;
+    background-color:#7C1D1C;
+    height: 5vh;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav_container a{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+    color: #FFFFFF;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-item{
+    width: 100%;
+    height: 100%;
+}
+
+.nav-item:hover{
+   background-color: #9B2423;;
+}
+nav ul{
+    list-style-type: none;
+}
+.nav-link{
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-link:hover .dropdown{
+    opacity: 1;
+    z-index: 1;
+    pointer-events: all;
+    cursor: pointer;
+}
+.dropdown{
+    text-align: left;
+    padding: 1.5rem;
+    opacity: 0;
+    pointer-events: none;
+    background: #F4F4F4;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #7C1D1C;
+}
